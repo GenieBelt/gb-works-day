@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db7708a6-7532-450c-911a-dbccff1c18e6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gb_working_day.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gb_working_day.gemspec" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gb_working_day.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gb_working_day/interval.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gb_working_day/version.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gb_working_day/working_week.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/working_week_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gb_working_day.iml" afterPath="$PROJECT_DIR$/.idea/gb_working_day.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/gb_working_day/working_week.rb" afterPath="$PROJECT_DIR$/lib/gb_working_day/working_week.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/working_week_spec.rb" afterPath="$PROJECT_DIR$/spec/working_week_spec.rb" />
     </list>
     <ignored path="gb_working_day.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,8 +21,10 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/gb_working_day@GBWorkingDay__WorkingWeek_free_days__gb_working_day.coverage" NAME="GBWorkingDay::WorkingWeek free days: gb_working_day Coverage Results" MODIFIED="1453985855843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gb_working_day" />
     <SUITE FILE_PATH="coverage/gb_working_day@GBWorkingDay__WorkingWeek_should_respond_to_work_day__if_day_is_a_Date__gb_working_day.coverage" NAME="GBWorkingDay::WorkingWeek should respond to work_day? if day is a Date: gb_working_day Coverage Results" MODIFIED="1453987480715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gb_working_day" />
+    <SUITE FILE_PATH="coverage/gb_working_day@GBWorkingDay__WorkingWeek__gb_working_day.coverage" NAME="GBWorkingDay::WorkingWeek: gb_working_day Coverage Results" MODIFIED="1453988062944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gb_working_day" />
     <SUITE FILE_PATH="coverage/gb_working_day@GBWorkingDay__WorkingWeek_should_properly_calculates_work_days__gb_working_day.coverage" NAME="GBWorkingDay::WorkingWeek should properly calculates work days: gb_working_day Coverage Results" MODIFIED="1453984337616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gb_working_day" />
     <SUITE FILE_PATH="coverage/gb_working_day@GBWorkingDay__WorkingWeek_work_days__gb_working_day.coverage" NAME="GBWorkingDay::WorkingWeek work days: gb_working_day Coverage Results" MODIFIED="1453985659873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gb_working_day" />
+    <SUITE FILE_PATH="coverage/gb_working_day@GBWorkingDay__WorkingWeek_should_respond_to_free_day__if_day_is_a_Time__gb_working_day.coverage" NAME="GBWorkingDay::WorkingWeek should respond to free_day? if day is a Time: gb_working_day Coverage Results" MODIFIED="1453987838193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gb_working_day" />
     <SUITE FILE_PATH="coverage/gb_working_day@GBWorkingDay__WorkingWeek_should_respond_to_work_day__if_day_is_a_Time__gb_working_day.coverage" NAME="GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day Coverage Results" MODIFIED="1453987404376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gb_working_day" />
     <SUITE FILE_PATH="coverage/gb_working_day@GBWorkingDay__WorkingWeek_free_days_should_calculates_work_days_for_7_days_work_and_start_on_any_day__gb_working_day.coverage" NAME="GBWorkingDay::WorkingWeek free days should calculates work days for 7 days work and start on any day: gb_working_day Coverage Results" MODIFIED="1453985730746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="gb_working_day" />
   </component>
@@ -51,8 +39,8 @@
             <file leaf-file-name="working_week_spec.rb" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/spec/working_week_spec.rb">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.62065333">
-                    <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
+                  <state vertical-scroll-proportion="0.14864865">
+                    <caret line="85" column="62" selection-start-line="85" selection-start-column="62" selection-end-line="85" selection-end-column="62" />
                     <folding />
                   </state>
                 </provider>
@@ -79,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29654035">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
@@ -99,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="working_week.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="working_week.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/gb_working_day/working_week.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.7710049">
+              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -139,9 +127,9 @@
         <option value="$PROJECT_DIR$/lib/gb_working_day/hash.rb" />
         <option value="$PROJECT_DIR$/lib/gb_working_day/interval.rb" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
-        <option value="$PROJECT_DIR$/lib/gb_working_day/working_week.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/spec/working_week_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/gb_working_day/working_week.rb" />
       </list>
     </option>
   </component>
@@ -231,73 +219,7 @@
       <recent name="$PROJECT_DIR$/spec" />
     </key>
   </component>
-  <component name="RunManager" selected="RSpec.GBWorkingDay::WorkingWeek should respond to work_day? if day is a Date: gb_working_day">
-    <configuration default="false" name="GBWorkingDay::WorkingWeek work days: gb_working_day" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="gb_working_day" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/working_week_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="GBWorkingDay::WorkingWeek work days" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="GBWorkingDay::WorkingWeek free days should calculates work days for 7 days work and start on any day: gb_working_day" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="gb_working_day" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/working_week_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="GBWorkingDay::WorkingWeek free days should calculates work days for 7 days work and start on any day" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="RSpec.GBWorkingDay::WorkingWeek should respond to free_day? if day is a Time: gb_working_day">
     <configuration default="false" name="GBWorkingDay::WorkingWeek free days: gb_working_day" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="gb_working_day" />
@@ -387,6 +309,72 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="GBWorkingDay::WorkingWeek should respond to work_day? if day is a Date" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GBWorkingDay::WorkingWeek: gb_working_day" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="gb_working_day" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/working_week_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="GBWorkingDay::WorkingWeek" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GBWorkingDay::WorkingWeek should respond to free_day? if day is a Time: gb_working_day" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="gb_working_day" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/working_week_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="GBWorkingDay::WorkingWeek should respond to free_day? if day is a Time" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -526,19 +514,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek work days: gb_working_day" />
-      <item index="1" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek free days should calculates work days for 7 days work and start on any day: gb_working_day" />
-      <item index="2" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek free days: gb_working_day" />
-      <item index="3" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to work_day? if day is a Date: gb_working_day" />
+      <item index="0" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek free days: gb_working_day" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to work_day? if day is a Date: gb_working_day" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek: gb_working_day" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to free_day? if day is a Time: gb_working_day" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to work_day? if day is a Date: gb_working_day" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek free days: gb_working_day" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek free days should calculates work days for 7 days work and start on any day: gb_working_day" />
-        <item index="4" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek work days: gb_working_day" />
+        <item index="0" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek: gb_working_day" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to free_day? if day is a Time: gb_working_day" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to work_day? if day is a Date: gb_working_day" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.GBWorkingDay::WorkingWeek free days: gb_working_day" />
       </list>
     </recent_temporary>
   </component>
@@ -550,26 +538,33 @@
       <option name="number" value="Default" />
       <updated>1453974456893</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added working week">
+      <created>1453987662032</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1453987662032</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GBWorkingDay__WorkingWeek_free_days__gb_working_day - 2016.01.28 at 13h 57m 36s.xml">
-      <configuration name="GBWorkingDay::WorkingWeek free days: gb_working_day" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="GBWorkingDay__WorkingWeek__gb_working_day - 2016.01.28 at 14h 29m 01s.xml">
+      <configuration name="GBWorkingDay::WorkingWeek: gb_working_day" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GBWorkingDay__WorkingWeek__gb_working_day - 2016.01.28 at 14h 29m 44s.xml">
+      <configuration name="GBWorkingDay::WorkingWeek: gb_working_day" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GBWorkingDay__WorkingWeek__gb_working_day - 2016.01.28 at 14h 29m 55s.xml">
+      <configuration name="GBWorkingDay::WorkingWeek: gb_working_day" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GBWorkingDay__WorkingWeek__gb_working_day - 2016.01.28 at 14h 34m 23s.xml">
+      <configuration name="GBWorkingDay::WorkingWeek: gb_working_day" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GBWorkingDay__WorkingWeek_should_respond_to_free_day__if_day_is_a_Time__gb_working_day - 2016.01.28 at 14h 34m 02s.xml">
+      <configuration name="GBWorkingDay::WorkingWeek should respond to free_day? if day is a Time: gb_working_day" configurationId="RSpecRunConfigurationType" />
     </history-entry>
     <history-entry file="GBWorkingDay__WorkingWeek_should_respond_to_work_day__if_day_is_a_Date__gb_working_day - 2016.01.28 at 14h 24m 41s.xml">
       <configuration name="GBWorkingDay::WorkingWeek should respond to work_day? if day is a Date: gb_working_day" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
-    <history-entry file="GBWorkingDay__WorkingWeek_should_respond_to_work_day__if_day_is_a_Time__gb_working_day - 2016.01.28 at 14h 02m 47s.xml">
-      <configuration name="GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
-    <history-entry file="GBWorkingDay__WorkingWeek_should_respond_to_work_day__if_day_is_a_Time__gb_working_day - 2016.01.28 at 14h 17m 19s.xml">
-      <configuration name="GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
-    <history-entry file="GBWorkingDay__WorkingWeek_should_respond_to_work_day__if_day_is_a_Time__gb_working_day - 2016.01.28 at 14h 17m 51s.xml">
-      <configuration name="GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
-    <history-entry file="GBWorkingDay__WorkingWeek_should_respond_to_work_day__if_day_is_a_Time__gb_working_day - 2016.01.28 at 14h 19m 55s.xml">
-      <configuration name="GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day" configurationId="RSpecRunConfigurationType" />
     </history-entry>
     <history-entry file="GBWorkingDay__WorkingWeek_should_respond_to_work_day__if_day_is_a_Time__gb_working_day - 2016.01.28 at 14h 20m 23s.xml">
       <configuration name="GBWorkingDay::WorkingWeek should respond to work_day? if day is a Time: gb_working_day" configurationId="RSpecRunConfigurationType" />
@@ -590,11 +585,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495424" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32947367" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -610,9 +606,25 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added working week" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added working week" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/lib/gb_working_day/working_week.rb</url>
+          <line>36</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="RSpecRunConfigurationType">
+        <watch expression="day.wday" language="ruby" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/LICENSE.txt">
@@ -709,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/working_week.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -727,7 +731,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29654035">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
@@ -735,8 +739,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/working_week_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62065333">
-          <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.14864865">
+          <caret line="85" column="62" selection-start-line="85" selection-start-column="62" selection-end-line="85" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/working_week.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7710049">
+          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
           <folding />
         </state>
       </provider>

@@ -24,13 +24,17 @@ module GBWorkingDay
     # Check if given day is a work day
     # @param day [Time, Date]
     def work_day?(day)
-      work_days.include? day.wday
+      week_day = day.wday
+      week_day = 7 if week_day == 0
+      work_days.include? week_day
     end
 
     # Check if given day is a work day
     # @param day [Time, Date]
     def free_day?(day)
-      free_days.include? day.wday
+      week_day = day.wday
+      week_day = 7 if week_day == 0
+      free_days.include? week_day
     end
   end
 end

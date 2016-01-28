@@ -67,7 +67,6 @@ describe GBWorkingDay::WorkingWeek do
     week = GBWorkingDay::WorkingWeek.new(5, 1)
     expect(week.work_days).to eq [1,2,3,4,5]
     monday = Time.now.beginning_of_week
-    expect(monday.monday?).to be_truthy
 
     expect(week.work_day? monday).to eq true
 
@@ -83,9 +82,8 @@ describe GBWorkingDay::WorkingWeek do
     week = GBWorkingDay::WorkingWeek.new(5, 1)
     expect(week.work_days).to eq [1,2,3,4,5]
     monday = Date.today.beginning_of_week
-    expect(monday.monday?).to be_truthy
 
-    expect(week.work_day? monday).to eq true
+    expect(week.work_day? monday).to eq true           #mondey
     expect(week.work_day? monday + 1.day).to eq true   #tuesday
     expect(week.work_day? monday + 2.days).to eq true  #wednesday
     expect(week.work_day? monday + 3.days).to eq true  #thursday
@@ -98,29 +96,27 @@ describe GBWorkingDay::WorkingWeek do
     week = GBWorkingDay::WorkingWeek.new(5, 1)
     expect(week.free_days).to eq [6,7]
     monday = Time.now.beginning_of_week
-    expect(monday.monday?).to be_truthy
 
-    expect(week.work_day? monday).to eq false
-    expect(week.work_day? monday + 1.day).to eq false
-    expect(week.work_day? monday + 2.days).to eq false
-    expect(week.work_day? monday + 3.days).to eq false
-    expect(week.work_day? monday + 4.days).to eq false
-    expect(week.work_day? monday + 5.days).to eq true
-    expect(week.work_day? monday + 6.days).to eq true
+    expect(week.free_day? monday).to eq false
+    expect(week.free_day? monday + 1.day).to eq false
+    expect(week.free_day? monday + 2.days).to eq false
+    expect(week.free_day? monday + 3.days).to eq false
+    expect(week.free_day? monday + 4.days).to eq false
+    expect(week.free_day? monday + 5.days).to eq true
+    expect(week.free_day? monday + 6.days).to eq true
   end
 
   it 'should respond to free_day? if day is a Date' do
     week = GBWorkingDay::WorkingWeek.new(5, 1)
     expect(week.free_days).to eq [6,7]
     monday = Date.today.beginning_of_week
-    expect(monday.monday?).to be_truthy
 
-    expect(week.work_day? monday).to eq false
-    expect(week.work_day? monday + 1.day).to eq false
-    expect(week.work_day? monday + 2.days).to eq false
-    expect(week.work_day? monday + 3.days).to eq false
-    expect(week.work_day? monday + 4.days).to eq false
-    expect(week.work_day? monday + 5.days).to eq true
-    expect(week.work_day? monday + 6.days).to eq true
+    expect(week.free_day? monday).to eq false
+    expect(week.free_day? monday + 1.day).to eq false
+    expect(week.free_day? monday + 2.days).to eq false
+    expect(week.free_day? monday + 3.days).to eq false
+    expect(week.free_day? monday + 4.days).to eq false
+    expect(week.free_day? monday + 5.days).to eq true
+    expect(week.free_day? monday + 6.days).to eq true
   end
 end
