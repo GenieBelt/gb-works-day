@@ -36,5 +36,15 @@ module GBWorkingDay
       week_day = 7 if week_day == 0
       free_days.include? week_day
     end
+
+    class << self
+      def current
+        Thread.current[:working_week] ||= self.new
+      end
+
+      def current=(new_week)
+        Thread.current[:working_week] = new_week if WorkingWeek === new_week
+      end
+    end
   end
 end

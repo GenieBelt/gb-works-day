@@ -1,4 +1,5 @@
 require 'gb_working_day/working_week'
+require 'gb_working_day/duration'
 module GBWorkingDay
   class Interval
     attr_reader :start_time, :end_time
@@ -11,10 +12,19 @@ module GBWorkingDay
     def initialize(start_time, end_time, params=Hash.new)
       @start_time = start_time
       @end_time = end_time
+      @symbol = 1
       revert if @start_time > @end_time
-      work_days = params.fetch(:work_days, 7)
-      week_start = params.fetch(:week_start, 1)
-      @working_week = WorkingWeek.new work_days, week_start
+      @working_week = params[:week]
+      unless @working_week
+        if params[:work_days] || params[:week_start]
+          work_days = params.fetch(:work_days, 7)
+          week_start = params.fetch(:week_start, 1)
+          @working_week = WorkingWeek.new work_days, week_start
+        else
+          @working_week = WorkingWeek.current
+        end
+      end
+
     end
 
     # @return [Integer] Number of working days in a given period
@@ -25,6 +35,7 @@ module GBWorkingDay
         working_days += 1 if @working_week.work_day?(date)
         date += 1.day
       end
+      Duration.new(working_days * @symbol, @working_week)
     end
 
     def endpoints
@@ -37,6 +48,7 @@ module GBWorkingDay
       new_end_time = @start_time
       @start_time = @end_time
       @end_time = new_end_time
+      @symbol= @symbol * -1
     end
   end
 end
