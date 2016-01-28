@@ -1,3 +1,3 @@
-module GbWorkingDay
-  VERSION = "0.0.1"
+module GBWorkingDay
+  VERSION = '0.0.1'
 end

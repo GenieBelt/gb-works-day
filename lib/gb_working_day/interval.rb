@@ -1,5 +1,5 @@
 require 'gb_working_day/working_week'
-module GbWorkingDay
+module GBWorkingDay
   class Interval
     attr_reader :start_time, :end_time
 

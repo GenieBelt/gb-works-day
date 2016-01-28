@@ -1,5 +1,5 @@
-require "gb_working_day/version"
+require 'gb_working_day/version'
 
-module GbWorkingDay
+module GBWorkingDay
   # Your code goes here...
 end
