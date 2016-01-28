@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db7708a6-7532-450c-911a-dbccff1c18e6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gb_working_day/core_ext.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/core_ext/integer_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gb_working_day.iml" afterPath="$PROJECT_DIR$/.idea/gb_working_day.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gb_working_day/core_ext/date.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gb_working_day/core_ext/time.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gb_working_day/helpers/date.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gb_working_day/helpers/time.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/gb_working_day.rb" afterPath="$PROJECT_DIR$/lib/gb_working_day.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/gb_working_day/core_ext/integer.rb" afterPath="$PROJECT_DIR$/lib/gb_working_day/core_ext/integer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/gb_working_day/duration.rb" afterPath="$PROJECT_DIR$/lib/gb_working_day/duration.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/gb_working_day/working_week.rb" afterPath="$PROJECT_DIR$/lib/gb_working_day/working_week.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/duration_spec.rb" afterPath="$PROJECT_DIR$/spec/duration_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/gb_working_day/interval.rb" afterPath="$PROJECT_DIR$/lib/gb_working_day/interval.rb" />
     </list>
     <ignored path="gb_working_day.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +59,8 @@
             <file leaf-file-name="integer_spec.rb" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/spec/core_ext/integer_spec.rb">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.13277134">
-                    <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+                  <state vertical-scroll-proportion="0.51211804">
+                    <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
                     <folding />
                   </state>
                 </provider>
@@ -84,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/lib/gb_working_day/interval.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -93,8 +90,48 @@
       <file leaf-file-name="duration.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/gb_working_day/duration.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0">
+            <state vertical-scroll-proportion="6.3934426">
               <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="date.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/gb_working_day/core_ext/date.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="time.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/gb_working_day/core_ext/time.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="date.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/gb_working_day/helpers/date.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="time.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/gb_working_day/helpers/time.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.35584843">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,21 +147,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="working_week.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="working_week.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/gb_working_day/working_week.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3344316">
-              <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -150,33 +177,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/gb_working_day/version.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gb_working_day.gemspec" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gb_working_day.gemspec">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Ruby Class Template" />
         <option value="RSpec Test Template" />
+        <option value="Ruby Class Template" />
       </list>
     </option>
   </component>
@@ -194,7 +201,6 @@
         <option value="$PROJECT_DIR$/lib/gb_working_day/version.rb" />
         <option value="$PROJECT_DIR$/gb_working_day.gemspec" />
         <option value="$PROJECT_DIR$/spec/interval_spec.rb" />
-        <option value="$PROJECT_DIR$/lib/gb_working_day/interval.rb" />
         <option value="$PROJECT_DIR$/lib/gb_working_day/core_ext.rb" />
         <option value="$PROJECT_DIR$/lib/gb_working_day.rb" />
         <option value="$PROJECT_DIR$/lib/gb_working_day/core_ext/integer.rb" />
@@ -202,6 +208,11 @@
         <option value="$PROJECT_DIR$/lib/gb_working_day/working_week.rb" />
         <option value="$PROJECT_DIR$/spec/duration_spec.rb" />
         <option value="$PROJECT_DIR$/spec/core_ext/integer_spec.rb" />
+        <option value="$PROJECT_DIR$/lib/gb_working_day/core_ext/date.rb" />
+        <option value="$PROJECT_DIR$/lib/gb_working_day/core_ext/time.rb" />
+        <option value="$PROJECT_DIR$/lib/gb_working_day/interval.rb" />
+        <option value="$PROJECT_DIR$/lib/gb_working_day/helpers/time.rb" />
+        <option value="$PROJECT_DIR$/lib/gb_working_day/helpers/date.rb" />
       </list>
     </option>
   </component>
@@ -343,7 +354,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core_ext" />
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,6 +371,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/gb_working_day/helpers" />
+      <recent name="$PROJECT_DIR$/lib/gb_working_day/core_ext" />
       <recent name="$PROJECT_DIR$/spec" />
     </key>
   </component>
@@ -738,7 +751,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453997645161</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Integer core extension">
+      <created>1453998729447</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1453998729447</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -777,7 +796,7 @@
     <frame x="1321" y="24" width="1639" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495424" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495424" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -805,7 +824,8 @@
     <MESSAGE value="Fixed work_day? and free_day? methods for week" />
     <MESSAGE value="refactored Gb o GB in namespace" />
     <MESSAGE value="Added duration and spec for it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added duration and spec for it" />
+    <MESSAGE value="Added Integer core extension" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Integer core extension" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -950,14 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/interval.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/gb_working_day.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -982,22 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/duration.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/working_week.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3344316">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/duration_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64488935">
@@ -1016,8 +1012,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/core_ext/integer_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13277134">
-          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.51211804">
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/working_week.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/duration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.3934426">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/interval.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/core_ext/date.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/core_ext/time.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/helpers/date.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/gb_working_day/helpers/time.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35584843">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>

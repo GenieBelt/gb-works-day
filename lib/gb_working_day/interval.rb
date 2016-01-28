@@ -38,6 +38,8 @@ module GBWorkingDay
       Duration.new(working_days * @symbol, @working_week)
     end
 
+    alias_method :duration, :working_days
+
     def endpoints
       [start_time, end_time]
     end
