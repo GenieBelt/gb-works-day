@@ -37,6 +37,14 @@ module GBWorkingDay
       free_days.include? week_day
     end
 
+    def ==(other) # :nodoc:
+      work_days_per_week == other.work_days_per_week && week_start == other.week_start
+    end
+
+    def eql?(other) # :nodoc:
+      work_days_per_week.eql?(other.work_days_per_week) && week_start.eql?(other.week_start)
+    end
+
     class << self
       def current
         Thread.current[:working_week] ||= self.new

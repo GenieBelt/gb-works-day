@@ -32,6 +32,10 @@ describe GBWorkingDay::Duration do
     expect(GBWorkingDay::Duration.new(1) == GBWorkingDay::Duration.new(1)).to be_truthy
     expect(GBWorkingDay::Duration.new(1) == GBWorkingDay::Duration.new(2)).to be_falsey
 
+    week = GBWorkingDay::WorkingWeek.new(3,3)
+    expect(GBWorkingDay::Duration.new(1, week) == GBWorkingDay::Duration.new(1)).to be_falsey
+    expect(GBWorkingDay::Duration.new(1, week) == GBWorkingDay::Duration.new(2)).to be_falsey
+
     expect(GBWorkingDay::Duration.new(1).eql? GBWorkingDay::Duration.new(1)).to be_truthy
     expect(GBWorkingDay::Duration.new(1).eql? GBWorkingDay::Duration.new(2)).to be_falsey
   end

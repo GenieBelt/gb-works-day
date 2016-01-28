@@ -1,0 +1,1 @@
+require 'gb_working_day/core_ext/integer'

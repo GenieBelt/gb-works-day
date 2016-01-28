@@ -37,7 +37,7 @@ module GBWorkingDay
 
     def ==(other) # :nodoc:
       if Duration === other
-        other.work_days == work_days
+        other.work_days == work_days && other.week == week
       else
         other == work_days
       end
