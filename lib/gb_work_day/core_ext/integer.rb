@@ -1,7 +1,7 @@
-require 'gb_works_day/duration'
+require 'gb_work_day/duration'
 class Integer
   def working_days(week=nil)
-    GBWorksDay::Duration.new(self, week)
+    GBWorkDay::Duration.new(self, week)
   end
 
   alias working_day working_days

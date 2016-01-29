@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in gb_works_day.gemspec
+# Specify your gem's dependencies in gb_work_day.gemspec
 gemspec
 
 group :test do

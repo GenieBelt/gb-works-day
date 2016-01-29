@@ -1,5 +1,5 @@
-require 'gb_works_day/work_week'
-module GBWorksDay
+require 'gb_work_day/work_week'
+module GBWorkDay
   class Duration
     SEC_IN_DAY = 86400
     include Comparable

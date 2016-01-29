@@ -1,11 +1,11 @@
 require 'spec_helper'
-require 'gb_works_day/core_ext/date'
-require 'gb_works_day/core_ext/integer'
+require 'gb_work_day/core_ext/date'
+require 'gb_work_day/core_ext/integer'
 require 'active_support/time'
 
 describe 'Date extensions' do
-  before(:all) { GBWorksDay::WorkWeek.current = GBWorksDay::WorkWeek.new(5) }
-  after(:all)  { GBWorksDay::WorkWeek.current = GBWorksDay::WorkWeek.new() }
+  before(:all) { GBWorkDay::WorkWeek.current = GBWorkDay::WorkWeek.new(5) }
+  after(:all)  { GBWorkDay::WorkWeek.current = GBWorkDay::WorkWeek.new() }
 
   it 'should respond to work?' do
     expect(Date.today.beginning_of_week.work?).to be_truthy
@@ -19,24 +19,24 @@ describe 'Date extensions' do
 
   it 'should respond to work_date' do
     date = Date.today
-    expect(date.work_date).to be_kind_of GBWorksDay::Date
+    expect(date.work_date).to be_kind_of GBWorkDay::Date
     expect(date.work_date).to eq date
   end
 
   it 'should respond to to_work_date' do
     date = Date.today
-    expect(date.to_work_date).to be_kind_of GBWorksDay::Date
+    expect(date.to_work_date).to be_kind_of GBWorkDay::Date
     expect(date.to_work_date).to eq date
   end
 
   it 'should respond to to_work' do
     date = Date.today
-    expect(date.to_work).to be_kind_of GBWorksDay::Date
+    expect(date.to_work).to be_kind_of GBWorkDay::Date
     expect(date.to_work).to eq date
   end
 
   it 'should properly subtract work dates' do
-    expect(Date.today - Date.tomorrow.to_work_date).to be_a_kind_of GBWorksDay::Duration
+    expect(Date.today - Date.tomorrow.to_work_date).to be_a_kind_of GBWorkDay::Duration
   end
 
   it 'should return next_work_day' do

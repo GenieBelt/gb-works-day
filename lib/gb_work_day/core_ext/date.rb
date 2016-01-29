@@ -1,8 +1,8 @@
-require 'gb_works_day/duration'
-require 'gb_works_day/helpers/date'
+require 'gb_work_day/duration'
+require 'gb_work_day/helpers/date'
 class Date
   def plus_with_work_duration(other)
-    if GBWorksDay::Duration === other
+    if GBWorkDay::Duration === other
       other.since(self)
     else
       plus_without_work_duration(other)
@@ -12,9 +12,9 @@ class Date
   alias_method :+, :plus_with_work_duration
 
   def minus_with_work_duration(other)
-    if GBWorksDay::Duration === other
+    if GBWorkDay::Duration === other
       plus_with_work_duration(- other)
-    elsif GBWorksDay::Date === other
+    elsif GBWorkDay::Date === other
       other - self
     else
       minus_without_work_duration(other)
@@ -38,22 +38,22 @@ class Date
   # Return next working day
   # @return [Time]
   def next_work_day
-    self + GBWorksDay::Duration.new(1, default_week)
+    self + GBWorkDay::Duration.new(1, default_week)
   end
 
   # Get date object for calculating working days
   #
-  # @param week [GBWorksDay::WorkWeek] if not set, it will use week set globally. For more check {GBWorkingDay::WorkWeek#current}
+  # @param week [GBWorkDay::WorkWeek] if not set, it will use week set globally. For more check {GBWorkingDay::WorkWeek#current}
   def work_date(week=nil)
-    GBWorksDay::Date.from_date self, week
+    GBWorkDay::Date.from_date self, week
   end
   alias_method :to_work, :work_date
   alias_method :to_work_date, :work_date
 
   private
 
-  # @return [GBWorksDay::WorkWeek]
+  # @return [GBWorkDay::WorkWeek]
   def default_week
-    GBWorksDay::WorkWeek.current
+    GBWorkDay::WorkWeek.current
   end
 end

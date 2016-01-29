@@ -1,4 +1,4 @@
-module GBWorksDay
+module GBWorkDay
   class WorkWeek
     attr_reader :work_days_per_week, :free_days_per_week, :work_days, :free_days, :week_start
 
