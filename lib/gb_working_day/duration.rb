@@ -89,8 +89,16 @@ module GBWorkingDay
 
     def sum(symbol, time)
       work_days_left = self.work_days
+      if work_days_left < 0
+        symbol *= -1
+        work_days_left *= -1
+      end
       while work_days_left > 0
-        time += (symbol * SEC_IN_DAY)
+        if time.is_a? ::Date
+          time += symbol * 1
+        else
+          time += (symbol * SEC_IN_DAY)
+        end
         work_days_left -= 1 if @week.work_day? time
       end
       time

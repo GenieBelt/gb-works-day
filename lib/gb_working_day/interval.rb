@@ -24,7 +24,6 @@ module GBWorkingDay
           @working_week = WorkingWeek.current
         end
       end
-
     end
 
     # @return [Integer] Number of working days in a given period

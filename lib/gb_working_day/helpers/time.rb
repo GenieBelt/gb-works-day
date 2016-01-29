@@ -11,6 +11,13 @@ module GBWorkingDay
       end
     end
 
+    private
+
+    # @return [GBWorkingDay::WorkingWeek]
+    def default_week
+      self.work_week || GBWorkingDay::WorkingWeek.current
+    end
+
     class << self
       # Create {GBWorkingDay::Time} object from a given Time object.
       # Copy constructor.
