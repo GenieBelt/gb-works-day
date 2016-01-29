@@ -1,6 +1,9 @@
 # GbWorkDay
 
-TODO: Write a gem description
+Library to make calculation on work days.
+Unlike others libraries like [`business_time`](https://github.com/bokmann/business_time), 
+[`working_hours`](https://github.com/Intrepidd/working_hours), [`biz`](https://github.com/zendesk/biz)
+it operates on whole days, not hours. 
 
 ## Installation
 
@@ -28,6 +31,26 @@ Set default work week for current thread
 beginning_of_week = 1 #Monday 
 work_days = 5 #wrokd days are Monday-Friday
 GBWorkDay::WorkWeek.current = GBWorkWeek.new(work_days, beginning_of_week)
+```
+
+or if you want to setup per instance
+
+```ruby
+beginning_of_week = 1 #Monday 
+work_days = 5 #wrokd days are Monday-Friday
+week = GBWorkWeek.new(work_days, beginning_of_week)
+my_date = Date.today.to_work_date(week)
+```
+
+or 
+
+```ruby
+beginning_of_week = 1 #Monday 
+work_days = 5 #wrokd days are Monday-Friday
+week = GBWorkWeek.new(work_days, beginning_of_week)
+my_date = my_date
+#some code here
+my_date.week = week
 ```
 
 ### Date and Time operation
@@ -75,6 +98,12 @@ You can also make more complicated calculations
 delivery_date = Date.today + 10.work_days
 ```
 
+or 
+
+```ruby
+amount_of_work = (start_date.to_work_date - end_date).work_days
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/gb_work_day/fork )
@@ -82,3 +111,9 @@ delivery_date = Date.today + 10.work_days
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## Alternatives
+
+* [`business_time`](https://github.com/bokmann/business_time)
+* [`working_hours`](https://github.com/Intrepidd/working_hours)
+* [`biz`](https://github.com/zendesk/biz)
