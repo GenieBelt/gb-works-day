@@ -1,5 +1,5 @@
-require 'gb_working_day/working_week'
-module GBWorkingDay
+require 'gb_works_day/work_week'
+module GBWorksDay
   class Duration
     SEC_IN_DAY = 86400
     include Comparable
@@ -7,7 +7,7 @@ module GBWorkingDay
     attr_accessor :work_days, :week
     def initialize(days, week=nil)
       @work_days = days
-      @week = week || WorkingWeek.current
+      @week = week || WorkWeek.current
     end
 
     def +(other) # :nodoc:

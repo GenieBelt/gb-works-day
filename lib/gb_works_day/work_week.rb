@@ -1,5 +1,5 @@
-module GBWorkingDay
-  class WorkingWeek
+module GBWorksDay
+  class WorkWeek
     attr_reader :work_days_per_week, :free_days_per_week, :work_days, :free_days, :week_start
 
     # @param work_days [#to_i] Amount of working days in a week. Default value is 7.
@@ -51,7 +51,7 @@ module GBWorkingDay
       end
 
       def current=(new_week)
-        Thread.current[:working_week] = new_week if WorkingWeek === new_week
+        Thread.current[:working_week] = new_week if WorkWeek === new_week
       end
     end
   end

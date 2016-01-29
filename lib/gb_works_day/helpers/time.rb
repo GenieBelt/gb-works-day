@@ -1,5 +1,5 @@
-require 'gb_working_day/interval'
-module GBWorkingDay
+require 'gb_works_day/interval'
+module GBWorksDay
   class Time < ::Time
     attr_accessor :work_week
 
@@ -13,9 +13,9 @@ module GBWorkingDay
 
     private
 
-    # @return [GBWorkingDay::WorkingWeek]
+    # @return [GBWorksDay::WorkWeek]
     def default_week
-      self.work_week || GBWorkingDay::WorkingWeek.current
+      self.work_week || GBWorksDay::WorkWeek.current
     end
 
     class << self

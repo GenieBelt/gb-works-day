@@ -1,6 +1,6 @@
-require 'gb_working_day/working_week'
-require 'gb_working_day/duration'
-module GBWorkingDay
+require 'gb_works_day/work_week'
+require 'gb_works_day/duration'
+module GBWorksDay
   class Interval
     attr_reader :start_time, :end_time
 
@@ -19,9 +19,9 @@ module GBWorkingDay
         if params[:work_days] || params[:week_start]
           work_days = params.fetch(:work_days, 7)
           week_start = params.fetch(:week_start, 1)
-          @working_week = WorkingWeek.new work_days, week_start
+          @working_week = WorkWeek.new work_days, week_start
         else
-          @working_week = WorkingWeek.current
+          @working_week = WorkWeek.current
         end
       end
     end
