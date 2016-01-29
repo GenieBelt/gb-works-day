@@ -26,8 +26,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db7708a6-7532-450c-911a-dbccff1c18e6" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/gb_working_day.gemspec" afterPath="$PROJECT_DIR$/gb_work_day.gemspec" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/spec/working_week_spec.rb" afterPath="$PROJECT_DIR$/spec/work_week_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
@@ -153,10 +151,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Gemfile">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.11591963">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                   <folding />
                 </state>
@@ -183,11 +181,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-14.4827585">
-                  <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.78960395">
+                  <caret line="108" column="59" selection-start-line="108" selection-start-column="59" selection-end-line="108" selection-end-column="59" />
                   <folding />
                 </state>
               </provider>
@@ -233,8 +231,8 @@
           <file leaf-file-name="gb_work_day.gemspec" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/gb_work_day.gemspec">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.17387944">
-                  <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.15069552">
+                  <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="65" />
                   <folding />
                 </state>
               </provider>
@@ -312,8 +310,8 @@
         <option value="$PROJECT_DIR$/lib/gb_work_day/core_ext/integer.rb" />
         <option value="$PROJECT_DIR$/lib/gb_work_day/interval.rb" />
         <option value="$PROJECT_DIR$/coverage/index.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/gb_work_day.gemspec" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -886,7 +884,19 @@
       <option name="project" value="LOCAL" />
       <updated>1454076203959</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updated gemspec and readme file.">
+      <created>1454076966318</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1454076966318</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixed spelling errors">
+      <created>1454077037592</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1454077037592</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -962,7 +972,9 @@
     <MESSAGE value="Added more tests." />
     <MESSAGE value="Some renaming." />
     <MESSAGE value="More renaming" />
-    <option name="LAST_COMMIT_MESSAGE" value="More renaming" />
+    <MESSAGE value="Updated gemspec and readme file." />
+    <MESSAGE value="Fixed spelling errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed spelling errors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1379,17 +1391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.4827585">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/interval_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1400,7 +1401,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11591963">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
@@ -1408,10 +1409,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gb_work_day.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17387944">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.15069552">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="65" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78960395">
+          <caret line="108" column="59" selection-start-line="108" selection-start-column="59" selection-end-line="108" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
