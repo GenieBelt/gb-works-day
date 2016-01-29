@@ -64,7 +64,7 @@ Date.today.work?
 or
 
 ```ruby
-Tim.now.work?
+Time.now.work?
 ```
 
 Check if today is holiday
@@ -76,7 +76,7 @@ Date.today.free?
 or
 
 ```ruby
-Tim.now.free?
+Time.now.free?
 ```
 
 Get next working day
