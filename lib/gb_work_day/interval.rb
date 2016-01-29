@@ -27,17 +27,17 @@ module GBWorkDay
     end
 
     # @return [Integer] Number of working days in a given period
-    def working_days
+    def work_days
       date = @start_time
-      working_days = 0
+      work_days = 0
       while date < end_time
-        working_days += 1 if @working_week.work_day?(date)
+        work_days += 1 if @working_week.work_day?(date)
         date += 1.day
       end
-      Duration.new(working_days * @symbol, @working_week)
+      Duration.new(work_days * @symbol, @working_week)
     end
 
-    alias_method :duration, :working_days
+    alias_method :duration, :work_days
 
     def endpoints
       [start_time, end_time]

@@ -5,7 +5,7 @@ module GBWorkDay
 
     def -(other)
       if other.is_a?(::Date) || other.is_a?(::Time)
-        Interval.new(self, other, week: self.work_week).working_days
+        Interval.new(self, other, week: self.work_week).work_days
       else
         super
       end
