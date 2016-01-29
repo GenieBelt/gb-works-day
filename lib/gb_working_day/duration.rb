@@ -64,7 +64,7 @@ module GBWorkingDay
     # Returns +true+ if +other+ is also a Duration instance, which has the
     # same parts as this one.
     def eql?(other)
-      Duration === other && other.work_days.eql?(work_days)
+      Duration === other && other.work_days.eql?(work_days) && other.week.eql?(week)
     end
 
     def inspect #:nodoc:

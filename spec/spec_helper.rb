@@ -19,6 +19,9 @@
 require 'simplecov'
 SimpleCov.start do
   add_filter '/spec/'
+  add_group 'Core Extensions', 'lib/core_ext'
+  add_group 'Helpers', 'lib/helpers'
+  add_group 'Library core', 'lib'
 end
 
 SimpleCov.minimum_coverage 90
