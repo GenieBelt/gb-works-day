@@ -15,7 +15,7 @@ class Date
     if GBWorkDay::Duration === other
       plus_with_work_duration(- other)
     elsif GBWorkDay::Date === other
-      other - self
+      - (other - self)
     else
       minus_without_work_duration(other)
     end

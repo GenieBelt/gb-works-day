@@ -20,6 +20,7 @@ describe GBWorkDay::Date do
     wednesday = monday + 2.days
     expect(GBWorkDay::Date.from_date(wednesday) - monday).to be_kind_of GBWorkDay::Duration
     expect(GBWorkDay::Date.from_date(wednesday) - GBWorkDay::Date.from_date(monday)).to be_kind_of GBWorkDay::Duration
+    expect((GBWorkDay::Date.from_date(wednesday) - GBWorkDay::Date.from_date(monday)).work_days).to eq 2
     expect(GBWorkDay::Date.from_date(monday) - 1).to be_kind_of Date
     expect((wednesday - GBWorkDay::Date.from_date(monday))).to be_kind_of GBWorkDay::Duration
   end
