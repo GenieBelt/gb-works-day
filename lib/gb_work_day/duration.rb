@@ -85,6 +85,10 @@ module GBWorkDay
     end
     alias :until :ago
 
+    def in_time_zone(zone)
+      self
+    end
+
     private
 
     def sum(symbol, time)
