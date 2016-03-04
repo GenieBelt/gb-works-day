@@ -57,8 +57,11 @@ describe 'Time extensions' do
 
   it 'should properly add work duration' do
     monday = Time.now.beginning_of_week
+    sunday = monday - 1.day
     wednesday = monday + 2.days
     friday = monday + 4.days
+    expect(sunday + 1.work_day).to eq (monday + 1.days)
+    expect(sunday + 1.work_day - 1.work_day).to eq monday
     expect(monday + 1.work_day).to eq (monday + 1.days)
     expect(friday + 1.work_day).to eq (friday + 3.days)
     expect(wednesday + 2.work_day).to eq (wednesday + 2.days)

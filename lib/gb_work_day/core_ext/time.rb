@@ -39,7 +39,15 @@ class Time
   # Return next working day
   # @return [Time]
   def next_work_day
-    self + GBWorkDay::Duration.new(1, default_week)
+    if default_week.free_day? self
+      next_day = self
+      while default_week.free_day? next_day
+        next_day += GBWorkDay::Duration::SEC_IN_DAY
+      end
+      next_day
+    else
+      self + GBWorkDay::Duration.new(1, default_week)
+    end
   end
 
   # Get time object for calculating working days

@@ -97,13 +97,21 @@ module GBWorkDay
         symbol *= -1
         work_days_left *= -1
       end
+      while @week.free_day? time
+        time = sum_normal_days time, symbol
+      end
       while work_days_left > 0
-        if time.is_a? ::Date
-          time += symbol * 1
-        else
-          time += (symbol * SEC_IN_DAY)
-        end
+        time = sum_normal_days time, symbol
         work_days_left -= 1 if @week.work_day? time
+      end
+      time
+    end
+
+    def sum_normal_days(time, days)
+      if time.is_a? ::Date
+        time += days * 1
+      else
+        time += (days * SEC_IN_DAY)
       end
       time
     end
