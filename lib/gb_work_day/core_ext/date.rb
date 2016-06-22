@@ -49,6 +49,20 @@ class Date
     end
   end
 
+  # Return previous working day
+  # @return [Time]
+  def previous_work_day
+    if default_week.free_day? self
+      previous_day = self
+      while default_week.free_day? previous_day
+        previous_day -= 1
+      end
+      previous_day
+    else
+      self - GBWorkDay::Duration.new(1, default_week)
+    end
+  end
+
   # Get date object for calculating working days
   #
   # @param week [GBWorkDay::WorkWeek] if not set, it will use week set globally. For more check {GBWorkingDay::WorkWeek#current}
