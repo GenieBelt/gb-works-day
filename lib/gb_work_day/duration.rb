@@ -74,14 +74,14 @@ module GBWorkDay
     # Calculates a new Time or Date that is as far in the future
     # as this Duration represents.
     def since(time = ::Time.current)
-      sum(1, time)
+      self.work_days > 0 ? sum(time) : subtract(time)
     end
     alias :from_now :since
 
     # Calculates a new Time or Date that is as far in the past
     # as this Duration represents.
     def ago(time = ::Time.current)
-      sum(-1, time)
+      self.work_days > 0 ? subtract(time) : sum(time)
     end
     alias :until :ago
 
@@ -91,22 +91,38 @@ module GBWorkDay
 
     private
 
-    def sum(symbol, time)
-      work_days_left = self.work_days
-      if work_days_left < 0
-        symbol *= -1
-        work_days_left *= -1
-      end
-      while @week.free_day? time
-        time = sum_normal_days time, symbol
-      end
-      while work_days_left > 0
-        time = sum_normal_days time, symbol
-        work_days_left -= 1 if @week.work_day? time
-      end
-      time
+    def sum(time)
+      monday, distance_to_monday = last_monday(time)
+      weekends_count = (distance_to_monday + self.work_days.abs) / @week.work_days_per_week
+      weekends_length = weekends_count * @week.free_days_per_week
+
+      sum_normal_days(sum_normal_days(sum_normal_days(monday, weekends_length), distance_to_monday), self.work_days.abs)
     end
 
+    def subtract(time)
+      end_of_week, distance_to_eof = next_end_of_week(time)
+      weekends_count = (distance_to_eof + self.work_days.abs) / @week.work_days_per_week
+      weekends_length = weekends_count * @week.free_days_per_week
+
+      sum_normal_days(sum_normal_days(sum_normal_days(end_of_week, -weekends_length), -distance_to_eof), -(self.work_days.abs))
+    end
+
+    # @param time [Date|Time]
+    # @return monday, distance_to_monday [Array<Date|Time, Integer>]
+    def last_monday(time)
+      distance_to_monday = (time.wday - 1) % 7
+      [sum_normal_days(time, -distance_to_monday), distance_to_monday]
+    end
+
+    # @param time [Date|Time]
+    # @return end_of_week, distance_to_eof [Array<Date|Time, Integer>]
+    def next_end_of_week(time)
+      distance_to_eof = (@week.work_days_per_week - (time.wday - 1)) % (@week.work_days_per_week + 1)
+      [sum_normal_days(time, distance_to_eof), distance_to_eof]
+    end
+
+    # @param time [Date|Time]
+    # @param days [Integer]
     def sum_normal_days(time, days)
       if time.is_a? ::Date
         time += days * 1
