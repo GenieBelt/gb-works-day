@@ -92,33 +92,25 @@ module GBWorkDay
     private
 
     def sum(time)
-      monday, distance_to_monday = last_monday(time)
-      weekends_count = (distance_to_monday + self.work_days.abs) / @week.work_days_per_week
+      distance_to_last_monday = (time.wday - 1) % 7
+      weekends_count = (distance_to_last_monday + self.work_days.abs) / @week.work_days_per_week
       weekends_length = weekends_count * @week.free_days_per_week
 
-      sum_normal_days(sum_normal_days(sum_normal_days(monday, weekends_length), distance_to_monday), self.work_days.abs)
+      sum_normal_days(sum_normal_days(time, weekends_length), self.work_days.abs)
     end
 
     def subtract(time)
-      end_of_week, distance_to_eof = next_end_of_week(time)
+      distance_to_eof = distance_to_end_of_week(time)
       weekends_count = (distance_to_eof + self.work_days.abs) / @week.work_days_per_week
       weekends_length = weekends_count * @week.free_days_per_week
 
-      sum_normal_days(sum_normal_days(sum_normal_days(end_of_week, -weekends_length), -distance_to_eof), -(self.work_days.abs))
+      sum_normal_days(sum_normal_days(time, -weekends_length), -self.work_days.abs)
     end
 
     # @param time [Date|Time]
-    # @return monday, distance_to_monday [Array<Date|Time, Integer>]
-    def last_monday(time)
-      distance_to_monday = (time.wday - 1) % 7
-      [sum_normal_days(time, -distance_to_monday), distance_to_monday]
-    end
-
-    # @param time [Date|Time]
-    # @return end_of_week, distance_to_eof [Array<Date|Time, Integer>]
-    def next_end_of_week(time)
-      distance_to_eof = (@week.work_days_per_week - (time.wday - 1)) % (@week.work_days_per_week + 1)
-      [sum_normal_days(time, distance_to_eof), distance_to_eof]
+    # @return distance_to_eof [Integer]
+    def distance_to_end_of_week(time)
+      (@week.work_days_per_week - time.wday) % (@week.work_days_per_week)
     end
 
     # @param time [Date|Time]
