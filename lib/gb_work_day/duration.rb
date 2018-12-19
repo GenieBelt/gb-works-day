@@ -74,14 +74,14 @@ module GBWorkDay
     # Calculates a new Time or Date that is as far in the future
     # as this Duration represents.
     def since(time = ::Time.current)
-      sum(1, time)
+      self.work_days > 0 ? sum(time) : subtract(time)
     end
     alias :from_now :since
 
     # Calculates a new Time or Date that is as far in the past
     # as this Duration represents.
     def ago(time = ::Time.current)
-      sum(-1, time)
+      self.work_days > 0 ? subtract(time) : sum(time)
     end
     alias :until :ago
 
@@ -91,22 +91,30 @@ module GBWorkDay
 
     private
 
-    def sum(symbol, time)
-      work_days_left = self.work_days
-      if work_days_left < 0
-        symbol *= -1
-        work_days_left *= -1
-      end
-      while @week.free_day? time
-        time = sum_normal_days time, symbol
-      end
-      while work_days_left > 0
-        time = sum_normal_days time, symbol
-        work_days_left -= 1 if @week.work_day? time
-      end
-      time
+    def sum(time)
+      distance_to_last_monday = (time.wday - 1) % 7
+      weekends_count = (distance_to_last_monday + self.work_days.abs) / @week.work_days_per_week
+      weekends_length = weekends_count * @week.free_days_per_week
+
+      sum_normal_days(sum_normal_days(time, weekends_length), self.work_days.abs)
     end
 
+    def subtract(time)
+      distance_to_eof = distance_to_end_of_week(time)
+      weekends_count = (distance_to_eof + self.work_days.abs) / @week.work_days_per_week
+      weekends_length = weekends_count * @week.free_days_per_week
+
+      sum_normal_days(sum_normal_days(time, -weekends_length), -self.work_days.abs)
+    end
+
+    # @param time [Date|Time]
+    # @return distance_to_eof [Integer]
+    def distance_to_end_of_week(time)
+      (@week.work_days_per_week - time.wday) % (@week.work_days_per_week)
+    end
+
+    # @param time [Date|Time]
+    # @param days [Integer]
     def sum_normal_days(time, days)
       if time.is_a? ::Date
         time += days * 1
