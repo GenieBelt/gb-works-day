@@ -1,15 +1,14 @@
 module GBWorkDay
   class WorkWeek
-    attr_reader :work_days_per_week, :free_days_per_week, :work_days, :free_days, :week_start
+    attr_reader :work_days_per_week, :free_days_per_week, :work_days, :free_days
 
     # @param work_days [#to_i] Amount of working days in a week. Default value is 7.
-    # @param week_start [#to_i] Number of a week day, when work starts. Default value is 1 corresponding to Monday
-    def initialize(work_days=7, week_start=1)
+    def initialize(work_days = 7)
       work_days = work_days.to_i
-      week_start = week_start.to_i
+      week_start = 1
       raise ArgumentError, 'Work days have to be between 0 and 7!' unless work_days >= 0 && work_days <= 7
       @work_days_per_week = work_days
-      @week_start = week_start % 7
+      @week_start = week_start
       @free_days_per_week = 7 - @work_days_per_week
       @work_days = []
       @work_days_per_week.times do
@@ -38,11 +37,11 @@ module GBWorkDay
     end
 
     def ==(other) # :nodoc:
-      work_days_per_week == other.work_days_per_week && week_start == other.week_start
+      work_days_per_week == other.work_days_per_week
     end
 
     def eql?(other) # :nodoc:
-      work_days_per_week.eql?(other.work_days_per_week) && week_start.eql?(other.week_start)
+      work_days_per_week.eql?(other.work_days_per_week)
     end
 
     class << self

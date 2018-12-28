@@ -6,65 +6,29 @@ describe GBWorkDay::WorkWeek do
 
   context 'work days' do
     it 'should calculates work days for 7 days work and start on monday' do
-      week = GBWorkDay::WorkWeek.new(7, 1)
+      week = GBWorkDay::WorkWeek.new(7)
       expect(week.work_days).to eq [1,2,3,4,5,6,7]
     end
-
-    it 'should calculates work days for 7 days work and start on tuesday' do
-      week = GBWorkDay::WorkWeek.new(7, 2)
-      expect(week.work_days).to eq [1,2,3,4,5,6,7]
-    end
-
     it 'should calculates work days for 5 days work week and start on monday' do
-      week = GBWorkDay::WorkWeek.new(5, 1)
+      week = GBWorkDay::WorkWeek.new(5)
       expect(week.work_days).to eq [1,2,3,4,5]
-    end
-
-    it 'should calculates work days for 5 days work week and start on tuesday' do
-      week = GBWorkDay::WorkWeek.new(5, 2)
-      expect(week.work_days).to eq [2,3,4,5,6]
-    end
-
-    it 'should calculates work days for 5 days work week and start on thursday' do
-      week = GBWorkDay::WorkWeek.new(5, 4)
-      expect(week.work_days).to eq [1,4,5,6,7]
-    end
-
-    it 'should calculates work days for 3 days work week and start on wednesday' do
-      week = GBWorkDay::WorkWeek.new(3, 3)
-      expect(week.work_days).to eq [3,4,5]
     end
   end
 
   context 'free days' do
-    it 'should calculates free days for 7 days work and start on any day' do
-      week = GBWorkDay::WorkWeek.new(7, rand(6)+1)
+    it 'should calculates free days for 7 days work' do
+      week = GBWorkDay::WorkWeek.new(7)
       expect(week.free_days).to eq []
     end
 
     it 'should calculates free days for 5 days work week and start on monday' do
-      week = GBWorkDay::WorkWeek.new(5, 1)
+      week = GBWorkDay::WorkWeek.new(5)
       expect(week.free_days).to eq [6,7]
-    end
-
-    it 'should calculates work days for 5 days work week and start on tuesday' do
-      week = GBWorkDay::WorkWeek.new(5, 2)
-      expect(week.free_days).to eq [1,7]
-    end
-
-    it 'should calculates work days for 5 days work week and start on thursday' do
-      week = GBWorkDay::WorkWeek.new(5, 4)
-      expect(week.free_days).to eq [2,3]
-    end
-
-    it 'should calculates work days for 3 days work week and start on wednesday' do
-      week = GBWorkDay::WorkWeek.new(3, 3)
-      expect(week.free_days).to eq [1,2,6,7]
     end
   end
 
   it 'should respond to work_day? if day is a Time' do
-    week = GBWorkDay::WorkWeek.new(5, 1)
+    week = GBWorkDay::WorkWeek.new(5)
     expect(week.work_days).to eq [1,2,3,4,5]
     monday = Time.now.beginning_of_week
 
@@ -79,7 +43,7 @@ describe GBWorkDay::WorkWeek do
   end
 
   it 'should respond to work_day? if day is a Date' do
-    week = GBWorkDay::WorkWeek.new(5, 1)
+    week = GBWorkDay::WorkWeek.new(5)
     expect(week.work_days).to eq [1,2,3,4,5]
     monday = Date.today.beginning_of_week
 
@@ -93,7 +57,7 @@ describe GBWorkDay::WorkWeek do
   end
 
   it 'should respond to free_day? if day is a Time' do
-    week = GBWorkDay::WorkWeek.new(5, 1)
+    week = GBWorkDay::WorkWeek.new(5)
     expect(week.free_days).to eq [6,7]
     monday = Time.now.beginning_of_week
 
@@ -107,7 +71,7 @@ describe GBWorkDay::WorkWeek do
   end
 
   it 'should respond to free_day? if day is a Date' do
-    week = GBWorkDay::WorkWeek.new(5, 1)
+    week = GBWorkDay::WorkWeek.new(5)
     expect(week.free_days).to eq [6,7]
     monday = Date.today.beginning_of_week
 

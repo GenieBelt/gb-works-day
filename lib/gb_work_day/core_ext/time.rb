@@ -26,34 +26,44 @@ class Time
 
   # Check if it is a work day.
   # @return [boolean]
-  def work?
-    default_week.work_day? self
+  def work?(week = default_week)
+    week.work_day? self
   end
 
   # Check if it is a work day.
   # @return [boolean]
-  def free?
-    default_week.free_day? self
+  def free?(week = default_week)
+    week.free_day? self
   end
 
   # Return next working day
   # @return [Time]
-  def next_work_day
-    if default_week.free_day? self
+  def next_work_day(week = default_week)
+    if week.free_day? self
       next_day = self
-      while default_week.free_day? next_day
-        next_day += GBWorkDay::Duration::SEC_IN_DAY
-      end
+      next_day += GBWorkDay::Duration::SEC_IN_DAY while week.free_day? next_day
       next_day
     else
-      self + GBWorkDay::Duration.new(1, default_week)
+      self + GBWorkDay::Duration.new(1, week)
+    end
+  end
+
+  # Return previous working day
+  # @return [Time]
+  def previous_work_day(week = default_week)
+    if week.free_day? self
+      previous_day = self
+      previous_day -= GBWorkDay::Duration::SEC_IN_DAY while week.free_day? previous_day
+      previous_day
+    else
+      self - GBWorkDay::Duration.new(1, week)
     end
   end
 
   # Get time object for calculating working days
   #
   # @param week [GBWorkDay::WorkWeek] if not set, it will use week set globally. For more check {GBWorkingDay::WorkWeek#current}
-  def work_time(week=nil)
+  def work_time(week = nil)
     GBWorkDay::Time.from_time self, week
   end
   alias_method :to_work, :work_time
