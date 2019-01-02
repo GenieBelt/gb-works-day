@@ -34,10 +34,6 @@ describe GBWorkDay::Duration do
     expect(GBWorkDay::Duration.new(1) == 1).to be_truthy
     expect(GBWorkDay::Duration.new(1) == 2).to be_falsey
 
-    week = GBWorkDay::WorkWeek.new(3, 3)
-    expect(GBWorkDay::Duration.new(1, week) == GBWorkDay::Duration.new(1)).to be_falsey
-    expect(GBWorkDay::Duration.new(1, week) == GBWorkDay::Duration.new(2)).to be_falsey
-
     expect(GBWorkDay::Duration.new(1).eql? GBWorkDay::Duration.new(1)).to be_truthy
     expect(GBWorkDay::Duration.new(1).eql? GBWorkDay::Duration.new(2)).to be_falsey
   end
@@ -57,7 +53,7 @@ describe GBWorkDay::Duration do
   end
 
   it 'should calculate proper time for future' do
-    week = GBWorkDay::WorkWeek.new(5, 1)
+    week = GBWorkDay::WorkWeek.new(5)
     monday = Time.now.beginning_of_week
 
     expect(GBWorkDay::Duration.new(1, week).since(monday)).to eq monday + 1.day
@@ -69,7 +65,7 @@ describe GBWorkDay::Duration do
   end
 
   it 'should calculate proper date for future' do
-    week = GBWorkDay::WorkWeek.new(5, 1)
+    week = GBWorkDay::WorkWeek.new(5)
     monday = Date.today.beginning_of_week
 
     expect(GBWorkDay::Duration.new(1, week).since(monday)).to eq monday + 1.day
@@ -81,7 +77,7 @@ describe GBWorkDay::Duration do
   end
 
   it 'should calculate proper time for past' do
-    week = GBWorkDay::WorkWeek.new(5, 1)
+    week = GBWorkDay::WorkWeek.new(5)
     monday = Time.now.beginning_of_week
 
     expect(GBWorkDay::Duration.new(1, week).until(monday)).to eq monday - 3.days
@@ -92,7 +88,7 @@ describe GBWorkDay::Duration do
   end
 
   it 'should calculate proper date for past' do
-    week = GBWorkDay::WorkWeek.new(5, 1)
+    week = GBWorkDay::WorkWeek.new(5)
     monday = Date.today.beginning_of_week
 
     expect(GBWorkDay::Duration.new(1, week).until(monday)).to eq monday - 3.days

@@ -73,6 +73,7 @@ module GBWorkDay
 
     # Calculates a new Time or Date that is as far in the future
     # as this Duration represents.
+    # If time is a free day, it is calculated starting from the next work day
     def since(time = ::Time.current)
       self.work_days > 0 ? sum(time) : subtract(time)
     end
@@ -80,6 +81,7 @@ module GBWorkDay
 
     # Calculates a new Time or Date that is as far in the past
     # as this Duration represents.
+    # Time has to be a work day, it is calculated starting from the next work day
     def ago(time = ::Time.current)
       self.work_days > 0 ? subtract(time) : sum(time)
     end
@@ -92,6 +94,7 @@ module GBWorkDay
     private
 
     def sum(time)
+      time = next_work_day time
       distance_to_last_monday = (time.wday - 1) % 7
       weekends_count = (distance_to_last_monday + self.work_days.abs) / @week.work_days_per_week
       weekends_length = weekends_count * @week.free_days_per_week
@@ -100,6 +103,7 @@ module GBWorkDay
     end
 
     def subtract(time)
+      time = next_work_day time
       distance_to_eof = distance_to_end_of_week(time)
       weekends_count = (distance_to_eof + self.work_days.abs) / @week.work_days_per_week
       weekends_length = weekends_count * @week.free_days_per_week
@@ -107,21 +111,31 @@ module GBWorkDay
       sum_normal_days(sum_normal_days(time, -weekends_length), -self.work_days.abs)
     end
 
-    # @param time [Date|Time]
+    # @param time [Date, Time]
     # @return distance_to_eof [Integer]
     def distance_to_end_of_week(time)
       (@week.work_days_per_week - time.wday) % (@week.work_days_per_week)
     end
 
-    # @param time [Date|Time]
+    # Return next working day, or today if today is a working day
+    # @param day [Date, Time]
+    # @return [Date, Time]
+    def next_work_day(day)
+      if @week.free_day? day
+        day.next_work_day(@week)
+      else
+        day
+      end
+    end
+
+    # @param time [Date, Time]
     # @param days [Integer]
     def sum_normal_days(time, days)
-      if time.is_a? ::Date
-        time += days * 1
-      else
-        time += (days * SEC_IN_DAY)
-      end
-      time
+      time + if time.is_a? ::Date
+               days * 1
+             else
+               (days * SEC_IN_DAY)
+             end
     end
   end
 end
