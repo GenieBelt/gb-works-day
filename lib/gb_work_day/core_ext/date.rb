@@ -49,7 +49,7 @@ class Date
   # @return [Time]
   def previous_work_day(week = default_week)
     if week.free_day? self
-      next_work_day(week) - week.free_days_per_week.days
+      next_work_day(week) - (week.free_days_per_week + 1).days
     else
       self - GBWorkDay::Duration.new(1, week)
     end
