@@ -29,7 +29,7 @@ Set default work week for current thread
 
 ```ruby
 beginning_of_week = 1 #Monday 
-work_days = 5 #wrokd days are Monday-Friday
+work_days = 5 #work days are Monday-Friday
 GBWorkDay::WorkWeek.current = GBWorkWeek.new(work_days, beginning_of_week)
 ```
 
@@ -37,7 +37,7 @@ or if you want to setup per instance
 
 ```ruby
 beginning_of_week = 1 #Monday 
-work_days = 5 #wrokd days are Monday-Friday
+work_days = 5 #work days are Monday-Friday
 week = GBWorkWeek.new(work_days, beginning_of_week)
 my_date = Date.today.to_work_date(week)
 ```
@@ -46,7 +46,7 @@ or
 
 ```ruby
 beginning_of_week = 1 #Monday 
-work_days = 5 #wrokd days are Monday-Friday
+work_days = 5 #work days are Monday-Friday
 week = GBWorkWeek.new(work_days, beginning_of_week)
 my_date = my_date
 #some code here
